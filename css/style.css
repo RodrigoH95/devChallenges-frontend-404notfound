@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Montserrat:wght@500;700&family=Space+Mono:wght@400;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #333333;
+  --color-secondary: #4F4F4F;
+  --color-terciary: #BDBDBD;
+
+  --ff-primary: 'Space Mono', monospace;
+  --ff-secondary: 'Montserrat', sans-serif;
+  --ff-terciary: 'Inconsolata', monospace;
+}
+body {
+  margin: 0 4rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#title {
+  margin-top: 1rem;
+  font-size: 24px;
+  font-family: var(--ff-terciary);
+  font-weight: 700;
+  letter-spacing: -2px;
+  text-transform: uppercase; 
+}
+
+#main-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-around;
+}
+
+#main-img {
+  width: 100%;
+}
+
+#content {
+  display: flex;
+  padding: 2rem 0;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#main-title {
+  font-family: var(--ff-primary);
+  font-size: 64px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  width: 60%;
+}
+
+#main-text {
+  font-family: var(--ff-primary);
+  font-size: 24px;
+  letter-spacing: -1px;
+  width: 50%;
+}
+
+#main-btn {
+  height: 68px;
+  border: none;
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  padding: 0 2rem;
+}
+
+#main-btn:hover {
+  background-color: var(--color-secondary);
+  transition: background-color 0.2s;
+}
+
+#main-btn:active {
+  background-color: #000000;
+}
+
+#footer {
+  margin-bottom: 1rem;
+}
+
+#footer-text {
+  font-size: 14px;
+  font-family: var(--ff-secondary);
+  text-align: center;
+  color: var(--color-terciary);
+}
+
+#footer-url {
+  text-decoration: none;
+  color: var(--color-terciary);
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1600px) {
+
+  #main-title {
+    font-size: 48px;
+    width: 100%;
+  }
+
+  #main-text {
+    font-size: 18px;
+    width: 100%;
+  }
+
+  #title {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #main-container {
+    flex-direction: column;
+  }
+
+  #content > * {
+    margin: 1rem 0;
+  }
+
+  #main-title {
+    font-size: 48px;
+    width: 100%;
+  }
+
+  #main-text {
+    font-size: 18px;
+    width: 80%;
+  }
+
+  #title {
+    font-size: 24px;
+  }
+}
